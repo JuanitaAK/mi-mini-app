@@ -1,13 +1,14 @@
 import React from "react";
 import Logo from "../components/Logo";
 import Navigation from "../components/Navigation";
+import Pokemon from "../components/Pokemon";
 
 const Home = () => {
   return (
     <div>
       <Logo />
       <Navigation />
-      <h1>Home </h1>
+      <Pokemon />
     </div>
   );
 };

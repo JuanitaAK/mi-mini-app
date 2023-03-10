@@ -3,7 +3,8 @@ import React from "react";
 const Logo = () => {
   return (
     <div className="logo">
-      <h1 className="title">PokeLibrary</h1>
+      <img src="./ball.png" alt="pikachu" />
+      <h1 className="title">POKE - LIBRARY</h1>
     </div>
   );
 };
