@@ -2,17 +2,20 @@
   @include verticalCenter;
   margin: 5px auto;
   background-color: rgb(215, 184, 46);
-  width: 300px;
+  width: 400px;
+  height: 200px;
   border-radius: 20px;
-  padding: 5px 0;
+  padding: 5px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.307);
-  // background: url(../../assets/img/main.jpg) center/cover;
+  background: url(../../assets/img/pokemon-svg-pika-30195-758x505.jpg) center/cover;
 
-  // img {
-  //   height: 40px;
-  // }
-  h3 {
-    margin-left: 10px;
-    color: $color-1;
+  img {
+    height: 40px;
+  }
+  .title {
+    color: rgba(20, 14, 181, 0.938);
+    position: absolute;
+    top: 1%;
+    left: 31%;
   }
 }

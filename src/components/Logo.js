@@ -3,7 +3,7 @@ import React from "react";
 const Logo = () => {
   return (
     <div className="logo">
-      <h1>Pokemon Library</h1>
+      <h1 className="title">PokeLibrary</h1>
     </div>
   );
 };
