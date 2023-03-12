@@ -4,6 +4,7 @@ import Card from "./Card";
 
 const Pokemons = () => {
   const [names, setName] = useState([]);
+  const [rangeValue, setRangeValue] = useState(36);
 
   useEffect(() => {
     axios
@@ -13,9 +14,17 @@ const Pokemons = () => {
 
   return (
     <div className="pokemons">
-      <h1>Pokemons</h1>
-      <ul>
-        {names.map((data) => (
+      <ul className="radio-container">
+        <input
+          type="range"
+          min="1"
+          max="250"
+          defaultValue={rangeValue}
+          onChange={(e) => console.log(e.target.value)}
+        />
+      </ul>
+      <ul className="poke">
+        {names.slice(0, rangeValue).map((data) => (
           <Card key={data.name} props={data} />
         ))}
       </ul>

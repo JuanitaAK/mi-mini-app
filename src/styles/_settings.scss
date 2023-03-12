@@ -1,15 +1,13 @@
 @font-face {
   font-family: "font-1";
   src: url(../assets/fonts/PocketMonk-15ze.ttf);
-
-  // https://fontmeme.com/fonts/pokmon-font/
 }
 
 $font-1: "font-1", sans-serif;
 
 $color-1: #f00004;
 $color-2: salmon;
-$color-3: #282c34;
+$color-3: #034bdb;
 $white: rgb(243, 243, 243);
 
 @mixin verticalCenter {
@@ -19,9 +17,8 @@ $white: rgb(243, 243, 243);
 }
 
 * {
-  
   padding: 0;
-  margin: 5px;
+  margin: 0px;
   box-sizing: border-box;
 }
 
