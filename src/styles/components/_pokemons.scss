@@ -45,14 +45,16 @@
   button {
     margin: 0 auto 20px;
     background: none;
-    border: 2px solid $color-1;
+    border: 2px solid $white;;
     padding: 4px 10px;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.2s;
+    color: $white;
 
     &:hover {
-      background: $color-1;
+      background: $white;
+     
     }
   }
 

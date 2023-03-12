@@ -43,7 +43,11 @@ const Pokemons = () => {
         />
         <label id="selectedName">
           Name :
-          <select onChange={(e) => setSelectedName(e.target.value)} id="name">
+          <select
+            type="option"
+            onChange={(e) => setSelectedName(e.target.value)}
+            id="name"
+          >
             {names.map((name, index) => (
               <option key={index} value={name.name} id={name.name}>
                 {name.name}
@@ -51,12 +55,16 @@ const Pokemons = () => {
             ))}
           </select>
         </label>
+        <label>
+          {selectedName && (
+            <button onClick={() => setSelectedName("")}>Stop Filter</button>
+          )}
+        </label>
       </ul>
 
       <ul className="poke">
         {names
           .filter((pokemons) => pokemons.name.includes(selectedName))
-          .sort()
           .slice(0, rangeValue)
           .map((data, index) => (
             <Card key={index} props={data} />

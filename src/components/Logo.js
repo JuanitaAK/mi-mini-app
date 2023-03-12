@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <div className="logo">
       <img src="./ball.png" alt="pikachu" />
-      <h1 className="title">POKE - LIBRARY</h1>
+      <h1 className="title">POKEDEX</h1>
     </div>
   );
 };

@@ -4,13 +4,11 @@ import axios from "axios";
 const Card = ({ props }) => {
   const [pokeData, setPokeData] = useState([]);
   const pokeUrl = "https://pokeapi.co/api/v2/pokemon/";
-  let pokemon = props.name;
+  const pokemon = props.name;
 
   useEffect(() => {
     axios.get(pokeUrl + pokemon).then((res) => setPokeData(res.data));
   }, [pokemon]);
-  /* <p>Types: {pokeData.types[0].type.name}</p> */
-  //  {pokeData.abilites[0].ability.name}
 
   return (
     <li className="card">
@@ -23,6 +21,7 @@ const Card = ({ props }) => {
         <h3>Id: {pokeData.id}</h3>
         <p>XP: {pokeData.base_experience}</p>
         <p>Weight:{pokeData.weight} </p>
+        {/* <p>Type:{pokeData.types[0] ? "helo" : "?"}</p> */}
       </div>
     </li>
   );
