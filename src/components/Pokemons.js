@@ -54,9 +54,13 @@ const Pokemons = () => {
       </ul>
 
       <ul className="poke">
-        {names.slice(0, rangeValue).map((data, index) => (
-          <Card key={index} props={data} />
-        ))}
+        {names
+          .filter((pokemons) => pokemons.name.includes(selectedName))
+          .sort()
+          .slice(0, rangeValue)
+          .map((data, index) => (
+            <Card key={index} props={data} />
+          ))}
       </ul>
     </div>
   );
