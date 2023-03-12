@@ -18,10 +18,15 @@ const Card = ({ props }) => {
       />
       <div className="infos">
         <h2>{pokeData.name}</h2>
-        <h3>Id: {pokeData.id}</h3>
+        {/* <h3>Id: {pokeData.id}</h3> */}
         <p>XP: {pokeData.base_experience}</p>
-        <p>Weight:{pokeData.weight} </p>
-        <p>Type:{pokeData ? "undefined" : "?"}</p>
+        <p>Weight: {pokeData.weight} </p>
+        <p>
+          Type:
+          {pokeData.types?.map((type) => {
+            return <ul>{type.type.name}</ul>;
+          })}
+        </p>
       </div>
     </li>
   );
