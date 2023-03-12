@@ -22,7 +22,7 @@ const Pokemons = () => {
   ];
   const [names, setName] = useState([]);
   const [rangeValue, setRangeValue] = useState(36);
-  const [selectedType, setSelectedType] = useState("");
+  const [selectedName, setSelectedName] = useState("");
 
   useEffect(() => {
     axios
@@ -41,21 +41,21 @@ const Pokemons = () => {
           defaultValue={rangeValue}
           onChange={(e) => setRangeValue(e.target.value)}
         />
-
-        <label id="selectedType">
-          Types :
-          <select onChange={(e) => setSelectedType(e.target.value)} id="type">
-            {types.map((type) => (
-              <option value={type} id={type}>
-                {type}
+        <label id="selectedName">
+          Name :
+          <select onChange={(e) => setSelectedName(e.target.value)} id="name">
+            {names.map((name, index) => (
+              <option key={index} value={name.name} id={name.name}>
+                {name.name}
               </option>
             ))}
           </select>
         </label>
       </ul>
+
       <ul className="poke">
-        {names.slice(0, rangeValue).map((data) => (
-          <Card key={data.name} props={data} />
+        {names.slice(0, rangeValue).map((data, index) => (
+          <Card key={index} props={data} />
         ))}
       </ul>
     </div>
