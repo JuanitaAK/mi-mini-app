@@ -3,23 +3,6 @@ import axios from "axios";
 import Card from "./Card";
 
 const Pokemons = () => {
-  // const types = [
-  //   "fire",
-  //   "grass",
-  //   "poison",
-  //   "bug",
-  //   "water",
-  //   "flying",
-  //   "electric",
-  //   "ground",
-  //   "fairy",
-  //   "ghost",
-  //   "ice",
-  //   "psychic",
-  //   "fighting",
-  //   "normal",
-  //   "dragon",
-  // ];
   const [names, setName] = useState([]);
   const [rangeValue, setRangeValue] = useState(36);
   const [selectedName, setSelectedName] = useState("");
