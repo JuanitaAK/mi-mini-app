@@ -16,6 +16,11 @@
     input {
       transform: translateY(1px); 
     }
+    
+    .selectedName{
+      border-radius: 50px;
+
+    }
 
 
     label {
@@ -43,7 +48,7 @@
   }
 
   button {
-    margin: 0 auto 20px;
+    margin: 5 auto 20px;
     background: none;
     border: 2px solid $white;;
     padding: 4px 10px;
@@ -54,6 +59,7 @@
 
     &:hover {
       background: $white;
+      color: black;
      
     }
   }

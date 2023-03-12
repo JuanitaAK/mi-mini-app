@@ -41,7 +41,7 @@ const Pokemons = () => {
           defaultValue={rangeValue}
           onChange={(e) => setRangeValue(e.target.value)}
         />
-        <label id="selectedName">
+        <label id="selectedName" className="selectedName">
           Name :
           <select
             type="option"
