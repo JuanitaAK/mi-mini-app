@@ -21,7 +21,7 @@ const Card = ({ props }) => {
         <h3>Id: {pokeData.id}</h3>
         <p>XP: {pokeData.base_experience}</p>
         <p>Weight:{pokeData.weight} </p>
-        {/* <p>Type:{pokeData.types[0] ? "helo" : "?"}</p> */}
+        <p>Type:{pokeData ? "undefined" : "?"}</p>
       </div>
     </li>
   );
