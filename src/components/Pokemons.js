@@ -61,7 +61,11 @@ const Pokemons = () => {
 
       <ul className="poke">
         {names
-          .filter((pokemons) => pokemons.name.includes(filter) || filter === "")
+          .filter(
+            (pokemons) =>
+              pokemons.name.includes(filter.toLowerCase()) ||
+              filter.toLowerCase() === ""
+          )
           .filter((pokemons) => pokemons.name.includes(selectedName))
           .slice(0, rangeValue)
           .map((data, i) => (
