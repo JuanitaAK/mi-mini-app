@@ -6,11 +6,15 @@ const Pokemons = () => {
   const [names, setName] = useState([]);
   const [rangeValue, setRangeValue] = useState(36);
   const [selectedName, setSelectedName] = useState("");
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon-species?limit=150")
-      .then((res) => setName(res.data.results));
+      .get("https://pokeapi.co/api/v2/pokemon-species?limit=1100")
+      .then((res) => setName(res.data.results))
+      .catch((error) => {
+        console.err(error);
+      });
   }, []);
 
   return (
@@ -20,10 +24,20 @@ const Pokemons = () => {
           className="input-range"
           type="range"
           min="1"
-          max="250"
+          max="1100"
           defaultValue={rangeValue}
           onChange={(e) => setRangeValue(e.target.value)}
         />
+        <label id="searchName" className="search-name">
+          Know the name ? :
+          <input
+            id="filter"
+            name="filter"
+            type="text"
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+          />
+        </label>
         <label id="selectedName" className="selectedName">
           Name :
           <select
@@ -47,10 +61,11 @@ const Pokemons = () => {
 
       <ul className="poke">
         {names
+          .filter((pokemons) => pokemons.name.includes(filter) || filter === "")
           .filter((pokemons) => pokemons.name.includes(selectedName))
           .slice(0, rangeValue)
-          .map((data, index) => (
-            <Card key={index} props={data} />
+          .map((data, i) => (
+            <Card key={i} props={data} />
           ))}
       </ul>
     </div>
