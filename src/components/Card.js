@@ -11,24 +11,24 @@ const Card = ({ props }) => {
   }, [pokemon]);
 
   return (
-    <li className="card">
+    <ul className="card">
       <img
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeData.id}.png`}
         alt={pokeData.name}
       />
       <div className="infos">
-        <h2>{pokeData.name}</h2>
+        <h1>{pokeData.name}</h1>
         {/* <h3>Id: {pokeData.id}</h3> */}
-        <p>XP: {pokeData.base_experience}</p>
-        <p>Weight: {pokeData.weight} </p>
-        <p>
+        <li>XP: {pokeData.base_experience}</li>
+        <li>Weight: {pokeData.weight} </li>
+        <li>
           Type:
-          {pokeData.types?.map((type) => {
-            return <ul>{type.type.name}</ul>;
+          {pokeData.types?.map((type, i) => {
+            return <ul key={i}>{type.type.name}</ul>;
           })}
-        </p>
+        </li>
       </div>
-    </li>
+    </ul>
   );
 };
 
