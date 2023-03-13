@@ -1,3 +1,9 @@
+Hello World !!
+
+👀 You can see the final version of the project 👉 [**PokeDex**](https://pokedex-beige-nu.vercel.app/).
+
+https://pokedex-beige-nu.vercel.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
